@@ -6,7 +6,7 @@
 }
 .swiggy--herosection{
     display: flex;
-    height: 70vh;
+    height: 90vh;
     width: 100%;
 }
 .swiggy--herocontent{
@@ -24,7 +24,8 @@
 
 }
 .swiggy--heroimg img{
-    width: 100%;
+    max-width: 100%;
+    min-width: 450px;
 }
 .swiggy--navbar{
     display: flex;
@@ -73,6 +74,7 @@ a.navlinks--dark-button:hover{
     display: flex;
     align-items: center;
      flex-wrap: wrap;
+     gap: 5px;
 }
 .swiggysearch-inputfield{
     outline: none;
@@ -102,7 +104,7 @@ a.navlinks--dark-button:hover{
     color: white;
     padding: 16px;
     text-decoration: none;
-    flex: 1;
+   
     font-size: 17px;
     font-weight: 600;
     text-align: center;
@@ -133,3 +135,141 @@ a.navlinks--dark-button:hover{
 .swiggy--city span{
     color: #93959f;
 }
+
+/* service swiggy */
+.swiggy--about{
+    background-color: rgb(43,30,22);
+    padding: 1rem 1.5rem;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    
+    justify-content: space-around;
+}
+.service{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    color: antiquewhite;
+}
+.service p{
+   text-align: center;
+}
+.service div{
+    width: 100px;
+    object-fit:cover;
+}
+.serviceimage img{
+    width: 100%;
+}
+
+
+/* swiggy-phone */
+
+.swiggy--app{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    row-gap: 16px;
+    
+}
+.swiggy-app-content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 1rem;
+    justify-content: center;
+
+
+}
+.swiggy-app-content h2{
+    font-size: 2.5rem;
+    width: 300px;
+}
+.swiggy-app-content p{
+width: 350px;
+}
+.downlod-image{
+    display: flex;
+    gap: 5px;
+    width: 200px;
+}
+.downlod-image img{
+    width: 100%;
+}
+.phone1,.phone2{
+    width: 350px;
+}
+.phone1 img,.phone2 img{
+    width: 100%;
+}
+
+footer{
+    background-color: #000000;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 2rem;
+}
+footer li{
+    list-style: none;
+}
+footer li:hover{
+    cursor: pointer;
+    color: #93959f;
+}
+.footer-image{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 200px;
+}
+footer-image img{
+    width: 100%;
+}
+
+
+
+@media only screen and (max-width: 999px) {
+  
+    .swiggy--heroimg{
+        display: none;
+    }
+    .swiggy--herosection{
+        /* background:linear-gradient(0deg, rgba(5, 5, 5, 0.719), rgba(0, 0, 0, 0.664)) , url(./images/heroimage.webp);
+        background-repeat: no-repeat;
+        background-size: cover; */
+    }
+}
+@media only screen and (max-width: 780px) {
+  .swiggy--app{
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+    .swiggy--app,footer{
+      grid-template-columns: 1fr;
+      grid-row: auto;
+      gap: 10px;
+ 
+    }
+    .swiggy--navbar{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .downlod-image{
+        flex-direction: column;
+    }
+    .swiggy--herosection{
+        height: 100% !important;
+    }
+    .swiggy--herocontent{
+        padding: 1rem !important;
+    }
+  }
